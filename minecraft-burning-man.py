@@ -128,9 +128,12 @@ mc.setBlocks(-130,0,-130, 130,0,130, sand)
 mc.setBlocks(-130,1,-130, 130,130,130, air)
 
 ## burning Man
-
 ##feet
-mc.setBlocks(-6,1,-3, -3,3,3, wood)
-mc.setBlocks(6,1,-3, 3,3,3, wood)
-mc.setBlocks(-5,2,-2, -2,2,2, tnt)
-mc.setBlocks(5,2,-2, 2,2,2, wood)
+mc.setBlocks(-6,1,-3, -3,2,3, wood)
+mc.setBlocks(6,1,-3, 3,2,3, wood)
+mc.setBlocks(-5,1,-2, -2,1,2, tnt)
+mc.setBlocks(5,1,-2, 2,1,2, wood)
+
+##legs
+mc.setBlocks(-1,3,-3, -3,13,3, wood)
+mc.setBlocks(-2,3,-2, -2,13,2, tnt)
