@@ -17,6 +17,8 @@ I personally use Minecraft Pi, which should come preloaded with most Raspberry P
 
 I do not have the regular Minecraft. However, if you have regular Minecraft and would like to participate, you can use the Raspberry Juice plugin. http://www.stuffaboutcode.com/2014/10/minecraft-raspberryjuice-and-canarymod.html
 
+theme song: http://youtu.be/YMrOokBvpYM
+
 Then just download the minecraft-burning-man.py file and open it in your favorite IDE and start coding! 
 
 Keep us updated about your progress. Create a branch and upload your code and start a pull request. 
