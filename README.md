@@ -21,4 +21,4 @@ Then just download the minecraft-burning-man.py file and open it in your favorit
 
 Keep us updated about your progress. Create a branch and upload your code and start a pull request. 
 
-Try not to inadvertantly build on top of someone else's creation. 
+Try not to inadvertantly build on top of someone else's creation. You may want to write your code in a function oriented style that allows you to easily move it to a different location.
