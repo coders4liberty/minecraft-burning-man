@@ -10,6 +10,7 @@
 from mcpi.minecraft import Minecraft
 from time import sleep
 from mcpi import block
+import math
 mc = Minecraft.create()
 
 
@@ -71,7 +72,7 @@ glowingObsidian = 246
 ##wool colors
 white = 0
 orange = 1
-Magenta - 2
+magenta = 2
 lightBlue = 3
 yellow = 4
 lime = 5
@@ -89,51 +90,80 @@ black = 15
 ## functions
 
 def giantMeteor(x,y,z,r):
-	xMin = x - r
-	xMax = x + r
-	yMin = y - r
-	yMax = y + r
-	for x in range(xMin,xMax):
-		for y in range(yMin,yMax):
-			mc.setBlocks(x,y, z-(r*r-x*x-y*y), x,y, z+(r*r-x*x-y*y), 246)
+        xMin = x - r
+        xMax = x + r
+        yMin = y - r
+        yMax = y + r
+	
+        for i in range(r):
+                for j in range(r):
+                        xi = x-i
+                        yi = y-j
+                        xf = x+i
+                        yf = y+j
+                        mc.setBlocks(x-i,y-j, z-(r*r-xi*xi-yi*yi), xf,yf, z+(r*r-xi*xi-yi*yi), 246)
 
 def delMeteor(x,y,z,r):
-	xMin = x - r
-	xMax = x + r
-	yMin = y - r
-	yMax = y + r
-	for x in range(xMin,xMax):
-		for y in range(yMin,yMax):
-			mc.setBlocks(x,y, z-(r*r-x*x-y*y), x,y, z+(r*r-x*x-y*y), air)
+        xMin = x - r
+        xMax = x + r
+        yMin = y - r
+        yMax = y + r
+	
+        for i in range(r):
+                for j in range(r):
+                        xi = x-i
+                        yi = y-j
+                        xf = x+i
+                        yf = y+j
+                        mc.setBlocks(x-i,y-j, z-(r*r-xi*xi-yi*yi), xf,yf, z+(r*r-xi*xi-yi*yi), air)
 				
 def giantMeteor2016():
-	t = 0
-	X = 130
-	Y = 130
-	Z = 130
-While Y > 0:
-	x = X - 9.8*t*t
-	y = Y - 9.8*t*t
-	z = Z - 9.8*t*t
-	giantMeteor(x,y,z,10)
-	air(x,y,z,10)
-	t = t + 1
+        t = 0
+        X = 0
+        Y = 130
+        Z = 0
+        y = 130
+        while (y > 0):
+                #x = X - 9.8*t*t
+                y = Y - 9.8*t*t
+                #z = Z - 9.8*t*t
+                giantMeteor(X,y,Z,2)
+                sleep(2)
+                delMeteor(X,y,Z,2)
+                t = t + 1
 	
 ## Let The World Be Destroyed
-mc.postToChat(“Let the World Be Destroyed”)
-giantMeteor2016()
+mc.postToChat("Let the World Be Destroyed")
+#giantMeteor2016()
+#sleep(3)
 
 ## sand & air
+mc.setBlocks(-130,-1,-130, 130,-1,130, stone)
 mc.setBlocks(-130,0,-130, 130,0,130, sand)
 mc.setBlocks(-130,1,-130, 130,130,130, air)
+
+sleep(1)
+mc.postToChat("Let")
+sleep(1)
+mc.postToChat("Let Life")
+sleep(1)
+mc.postToChat("Let Life Live")
 
 ## burning Man
 ##feet
 mc.setBlocks(-6,1,-3, -3,2,3, wood)
-mc.setBlocks(6,1,-3, 3,2,3, wood)
-mc.setBlocks(-5,1,-2, -2,1,2, tnt)
-mc.setBlocks(5,1,-2, 2,1,2, wood)
+mc.setBlocks( 6,1,-3,   3,2,3, wood)
+mc.setBlocks(-5,1,-2, -4,1,2, tnt, 1)
+mc.setBlocks( 5,1,-2,   4,1,2, tnt, 1)
 
 ##legs
-mc.setBlocks(-1,3,-3, -3,13,3, wood)
-mc.setBlocks(-2,3,-2, -2,13,2, tnt)
+mc.setBlocks(-6,3,-3, -3,13,0, wood)
+mc.setBlocks(-5,3,-2, -4,13,-1, tnt, 1)
+
+mc.setBlocks(6,3,-3, 3,13,0, wood)
+mc.setBlocks(5,3,-2, 4,13,-1, tnt, 1)
+
+##body
+mc.setBlocks(-6,14,-3, 6,33,0, wood)
+mc.setBlocks(-5,15,-2, 5,32,-1, tnt, 1)
+
