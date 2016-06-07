@@ -131,7 +131,7 @@ def giantMeteor2016():
                 sleep(2)
                 delMeteor(X,y,Z,2)
                 t = t + 1
-	
+5	
 ## Let The World Be Destroyed
 mc.postToChat("Let the World Be Destroyed")
 #giantMeteor2016()
@@ -167,3 +167,24 @@ mc.setBlocks(5,3,-2, 4,13,-1, tnt, 1)
 mc.setBlocks(-6,14,-3, 6,33,0, wood)
 mc.setBlocks(-5,15,-2, 5,32,-1, tnt, 1)
 
+##arm
+mc.setBlocks(-9,31,-3, -7,45,0, wood)
+mc.setBlocks(-8,32,-2, -8,44,-1, tnt, 1)
+
+mc.setBlocks(9,33,-3, 7,23,0, wood)
+mc.setBlocks(8,32,-2, 8,25,-1, tnt, 1)
+mc.setBlocks(9,26,-3, 7,23,7, wood)
+mc.setBlocks(8,25,-2, 8,24,6, tnt, 1)
+
+##torch
+mc.setBlocks(-9,46,-3, -7,46,0, tnt, 1)
+mc.setBlocks(-10,47,-3, -8,47,0, tnt, 1)
+mc.setBlocks(-11,48,-3, -8,48,0, tnt, 1)
+
+##book
+mc.setBlocks(11,27,3, 5,29,8, tnt, 1)
+mc.setBlocks(10,28,3, 5,28,8, wool)
+
+##head
+mc.setBlocks(-3,33,-3, 3,40,3, wood)
+mc.setBlocks(-2,34,-2, 2,39,2, tnt, 1)
