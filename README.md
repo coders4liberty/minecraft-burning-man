@@ -10,6 +10,8 @@ While personally I find Scratch to be the best place to start for beginning code
 There are a lot of resources that you can use to get started.
 First there is the Minecraft Pi resources on Raspberry Pi's website: https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/
 
+Geek Gurl Diaries is also a great place to start: https://www.youtube.com/playlist?list=PLME-KWdxI8dfQ1mKqnED8eAxZIb82ju6H
+
 To go more in-depth into the Minecraft programming, visit Stuff About Code http://www.stuffaboutcode.com/p/minecraft.html
 and especially the API reference page http://www.stuffaboutcode.com/p/minecraft-api-reference.html
 
