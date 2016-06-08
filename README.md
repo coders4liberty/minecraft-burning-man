@@ -23,6 +23,8 @@ theme song: http://youtu.be/YMrOokBvpYM
 
 Then just download the minecraft-burning-man.py file and open it in your favorite IDE and start coding! 
 
-Keep us updated about your progress. Create a branch and upload your code and start a pull request. 
+Keep us updated about your progress. Create a branch and upload your code and start a pull request.
+
+If you need some help with learning GitHub, check out GitHub for NOobs https://youtu.be/1h9_cB9mPT8?list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw
 
 Try not to inadvertantly build on top of someone else's creation. You may want to write your code in a function oriented style that allows you to easily move it to a different location.
