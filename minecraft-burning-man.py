@@ -138,16 +138,11 @@ mc.postToChat("Let the World Be Destroyed")
 #sleep(3)
 
 ## sand & air
-mc.setBlocks(-130,-1,-130, 130,-1,130, stone)
-mc.setBlocks(-130,0,-130, 130,0,130, sand)
-mc.setBlocks(-130,1,-130, 130,130,130, air)
+mc.player.setPos(0,420,13)
+mc.setBlocks(-153,-1,-153, 153,-1,153, stone)
+mc.setBlocks(-153, 0,-153, 153,0,153, sand)
+mc.setBlocks(-153, 1,-153, 153,153,153, air)
 
-sleep(1)
-mc.postToChat("Let")
-sleep(1)
-mc.postToChat("Let Life")
-sleep(1)
-mc.postToChat("Let Life Live")
 
 ## burning Man
 ##feet
@@ -155,6 +150,7 @@ mc.setBlocks(-6,1,-3, -3,2,3, wood)
 mc.setBlocks( 6,1,-3,   3,2,3, wood)
 mc.setBlocks(-5,1,-2, -4,1,2, tnt, 1)
 mc.setBlocks( 5,1,-2,   4,1,2, tnt, 1)
+mc.postToChat("Let")
 
 ##legs
 mc.setBlocks(-6,3,-3, -3,13,0, wood)
@@ -162,6 +158,7 @@ mc.setBlocks(-5,3,-2, -4,13,-1, tnt, 1)
 
 mc.setBlocks(6,3,-3, 3,13,0, wood)
 mc.setBlocks(5,3,-2, 4,13,-1, tnt, 1)
+
 
 ##body
 mc.setBlocks(-6,14,-3, 6,33,0, wood)
@@ -175,6 +172,7 @@ mc.setBlocks(9,33,-3, 7,23,0, wood)
 mc.setBlocks(8,32,-2, 8,25,-1, tnt, 1)
 mc.setBlocks(9,26,-3, 7,23,7, wood)
 mc.setBlocks(8,25,-2, 8,24,6, tnt, 1)
+mc.postToChat("Let Life")
 
 ##torch
 mc.setBlocks(-9,46,-3, -7,46,0, tnt, 1)
@@ -188,3 +186,4 @@ mc.setBlocks(10,28,3, 5,28,8, wool)
 ##head
 mc.setBlocks(-3,33,-3, 3,40,3, wood)
 mc.setBlocks(-2,34,-2, 2,39,2, tnt, 1)
+mc.postToChat("Let Life Live")
