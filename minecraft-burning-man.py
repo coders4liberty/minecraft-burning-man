@@ -1,9 +1,9 @@
-## Welcome to Minecraft Burning Man, a collaborative project by Coders for Liberty, to raise awareness about coding. 
+''' Welcome to Minecraft Burning Man, a collaborative project by Coders for Liberty, to raise awareness about coding. 
 ## theme song: “Burn” by Rebel Inc.” youtu.be/YMrOokBvpYM
 ## Use the Raspberry Juice plugin on PC version http://www.stuffaboutcode.com/2014/10/minecraft-raspberryjuice-and-canarymod.html
 ## visit raspberrypi.org/learning/getting-started-with-minecraft-pi to get started
 ## Visit stuffaboutcode.com/p/minecraft-api-reference.html for a list of the Minecraft commands.
-## Let the coding begin!
+## Let the coding begin! '''
 
 ## header
 ## import
@@ -131,17 +131,61 @@ def giantMeteor2016():
                 sleep(2)
                 delMeteor(X,y,Z,2)
                 t = t + 1
-5	
+
+def warp(x,y,z):
+    mc.player.setPos(x,y,z)
+
+def tunnel(w,x,y,z, colors):
+    mc.postToChat("Building tunnel")
+    air = 0
+    wool = 35
+    ##hole downwww
+    ##mc.setBlock(x,10,z, x,y-4,z, air)
+    for i in colors:
+        ##ceiling
+        mc.setBlocks(x, y+w+2, z-w, x, y+w+2, z+w, wool, i)
+        ##floor
+        mc.setBlocks(x, y-1, z-w, x, y-1, z+w, wool, i)
+        ##minus wall
+        mc.setBlocks(x,  y-1, z-w-1, x, y+w+2, z-w-1, wool, i)
+        ##plus wall
+        mc.setBlocks(x, y-1, z+w+1, x, y+w+2, z+w+1, wool, i)
+        ##air
+        mc.setBlocks(x, y, z-w, x, y+w+1, z+w, air)
+        x = x + 1
+    mc.postToChat("Tunnel Built")
+
+
+def hole(w,x,y,z, colors):
+    mc.postToChat("Digging hole")
+    air = 0
+    wool = 35
+    ##hole downwww
+    ##mc.setBlock(x,10,z, x,y-4,z, air)
+    for i in colors:
+        ##ceiling
+        mc.setBlocks(x+w+2, y, z-w, x, y, z+w, wool, i)
+        ##floor
+        mc.setBlocks(x-1, y, z-w, x-1, y, z+w, wool, i)
+        ##minus wall
+        mc.setBlocks(x-1,  y, z-w-1, x+w+2, y, z-w-1, wool, i)
+        ##plus wall
+        mc.setBlocks(x-1, y, z+w+1, x+w+2, y, z+w+1, wool, i)
+        ##air
+        mc.setBlocks(x, y, z-w, x+w+1, y, z+w, air)
+        y = y - 1
+    mc.postToChat("Dig dug")
+	
 ## Let The World Be Destroyed
 mc.postToChat("Let the World Be Destroyed")
 #giantMeteor2016()
 #sleep(3)
 
 ## sand & air
-mc.player.setPos(0,420,13)
-mc.setBlocks(-153,-1,-153, 153,-1,153, stone)
-mc.setBlocks(-153, 0,-153, 153,0,153, sand)
-mc.setBlocks(-153, 1,-153, 153,153,153, air)
+#mc.player.setPos(0,420,13)
+mc.setBlocks(-156,-1,-153, 156,-1,156, stone)
+mc.setBlocks(-156, 0,-156, 156,0,156, sand)
+mc.setBlocks(-156, 1,-156, 156,156,156, air)
 
 
 ## burning Man
@@ -187,3 +231,13 @@ mc.setBlocks(10,28,3, 5,28,8, wool)
 mc.setBlocks(-3,33,-3, 3,40,3, wood)
 mc.setBlocks(-2,34,-2, 2,39,2, tnt, 1)
 mc.postToChat("Let Life Live")
+
+#Pi Hole of Death
+##When you die, you see the digits of pi flash before your eyes
+##When you die, you see numbers as colors
+pi = [3, 1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4,6,2,6,4,3, 3,8,3,2,7,9,5,0,2,8, 8,4,1,9,7,1,6, 9, 3, 9, 9,3,7,5,1,0,5,8,2,0,9,7,4,9,4,4,5,9,2,3,0,7,8,1,6,4, 0,6,2,8,6,2,0,8,9,9, 8,6,2,8,0,3,4, 8, 2,5,3,4,2, 1,1,7,0, 6, 7,9,8,2,1,4,8,0,8,6,5,1,3,2,8,2,3,0,6, 6,4,7,0,9,3,8,4,4,6,0,9, 5,5,0,5, 8, 2,2, 3, 1,7, 2,5, 3,5,9,4,0,8,1,2,8,4,8,1,1,1,7,4,5,0,2,8,4,1,0,2,7,0,1,9,3,8, 5,2,1,1,0,5,5, 5, 9, 6,4,4,6,2,2,9,4,8,9,5,4,9,3,0,3,8,1,9,6,4,4,2,8,8,1,0,9,7,5,6,6,5,9,3,3,4,4,6,1,2,8,4,7,5,6, 4, 8,2,3,3, 7, 8, 6, 7, 8, 3, 1, 6, 5, 2, 7, 1, 2, 0, 1, 9, 0, 9, 1, 4, 5, 6, 4, 8, 5, 6, 6, 9, 2, 3, 4, 6, 0, 3, 4, 8, 6, 1, 0, 4, 5, 4, 3, 2, 6, 6, 4, 8, 2, 1, 3, 3, 9, 3, 6, 0, 7, 2, 6, 0, 2, 4, 9, 1, 4, 1, 2, 7, 3, 7, 2, 4, 5, 8, 7, 0, 0, 6]
+mc.postToChat("This is Madness")
+mc.setBlocks(18,1,13, 24,1,19, stone)
+hole(1,20,1,16,pi)
+mc.postToChat("This is Minecraft Burning Man!")
+
