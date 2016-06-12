@@ -8,7 +8,8 @@ During the LP primaries, the work of Judd Weiss was especially intriquing and in
 While personally I find Scratch to be the best place to start for beginning coders, Python is a great next step in coding education. One game that has captured the imagination of the younger generation is Minecraft. To build on the Weiss theme which closely resembles that of Burning Man, I decided that our first project as Coders for Liberty is creating a Minecraft Burning Man using Python. 
 
 There are a lot of resources that you can use to get started.
-First there is the Minecraft Pi resources on Raspberry Pi's website: https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/
+First, there is our website http://code4liberty.wordpress.com/
+Then there is the Minecraft Pi resources on Raspberry Pi's website: https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/
 
 Geek Gurl Diaries is also a great place to start: https://www.youtube.com/playlist?list=PLME-KWdxI8dfQ1mKqnED8eAxZIb82ju6H
 
